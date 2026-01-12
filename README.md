@@ -95,7 +95,7 @@ Should print "v24.12.0".
 
 <img width="1249" height="505" alt="WindowsTerminal_EvxojbzRN5" src="https://github.com/user-attachments/assets/bcb3ad82-450a-44b7-bbfa-b497a48412eb" />
 
-# 4. Lets istall Python
+# 4. Lets install Python
 
 ```
 sudo apt install python3
@@ -304,4 +304,4 @@ docker system prune -a --volumes
 
 <img width="1567" height="1085" alt="vySM1zY4D2" src="https://github.com/user-attachments/assets/3895a9b0-286d-4699-8bfd-7be8b3dda8e1" />
 
-### Made with 🫶🏻❤️ by *[MystiqueMide](x.com/MystiqueMide)*
+### Made with 🫶🏻❤️ by [MYSTIQUEMIDE](https://x.com/MystiqueMide)
