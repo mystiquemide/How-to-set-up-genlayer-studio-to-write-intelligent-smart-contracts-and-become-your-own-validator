@@ -1,4 +1,7 @@
 # How to set up Genlayer studio to write intelligent smart contracts and become your own validator
+
+<img width="1537" height="893" alt="chrome_Jk7SBwDBZA" src="https://github.com/user-attachments/assets/8c7c07c8-2dcd-488a-8626-c60aaab4ef9d" />
+
 This guide will show you how to set up Genlayer Studio, write intelligent smart contracts, and become your own validator.
 # First, understand what Genlayer is 
 Genlayer is the first Intelligent Blockchain that enables smart contracts to natively access the Internet and go beyond deterministic logic, to make subjective decisions.
@@ -196,3 +199,109 @@ We want to initialise 5 validators, and we will need API keys for this
 <img width="1738" height="682" alt="qYfCbB3PXG" src="https://github.com/user-attachments/assets/8dee2d6f-2ff0-4dca-8aba-2e0e84a6c636" />
 
 # 8. Start up the Node
+```
+genlayer up
+```
+You should see a localhost open directly in your browser, and click on it 
+# http://localhost:8080
+
+<img width="1765" height="295" alt="image" src="https://github.com/user-attachments/assets/b7120c72-bb74-4318-9e5e-177f1d8ee060" />
+
+You will be welcome to the Genlayer Studio
+# 9. The Genlayer Studio
+- Open Localhost
+- Watch the tutorial on how to navigate the studio
+
+<img width="1537" height="893" alt="chrome_zq41DKb9wx" src="https://github.com/user-attachments/assets/a2686f58-27c9-41a8-bd5f-f4a718291cae" />
+
+- Click on your validators to check
+
+<img width="1537" height="893" alt="chrome_LUmjDH5pHp" src="https://github.com/user-attachments/assets/9e337820-520d-402c-ba25-72d105e1bb9b" />
+
+# 10. Writing your first smart contract
+- Select contracts
+- Connect wallet
+- Connect Metamask wallet
+- Switch to the Genlayer Test Network
+- Click on _hello_world.py
+- You will have a bunch of codes already
+- Click on Run and Debug
+- Click on Deploy _hello_world.py
+- Confirm and Approve in wallet
+- Done, your contract will be deployed successfully
+
+<img width="1537" height="893" alt="chrome_BgaAP7AR0E" src="https://github.com/user-attachments/assets/ba1864eb-3426-4def-99af-d4b995c70ec8" />
+
+<img width="1537" height="893" alt="chrome_QNe4dL0F9U" src="https://github.com/user-attachments/assets/d5a51bbb-e011-41f8-ac70-8e5cb09eee5a" />
+
+<img width="1537" height="893" alt="chrome_lDQu5wSM7V" src="https://github.com/user-attachments/assets/0e21c283-d17a-470c-8b52-bda44b6989d5" />
+
+<img width="1537" height="893" alt="chrome_s9Od32Ju0D" src="https://github.com/user-attachments/assets/aa37e177-d386-4def-a455-a98ae2fc5eaa" />
+
+# 11. [Get Started with Genlayer Incentived Builder Point Program](https://x.com/MystiqueMide/status/2006223513930080342)
+- Follow all the steps below above the link to get started
+
+# We have successfully learnt how to create and run our own genlayer CLI using our own terminal
+
+# TROUBLESHOOT 
+### ⚠️ 1. Error: stderr maxBuffer length exceeded
+This occurs during `genlayer init` when the terminal output is too large for the Node.js buffer.
+
+**The Manual Workaround:**
+If the automatic initialisation fails, run the Docker commands manually:
+1. `cd` into your GenLayer node_modules directory.
+2. Run `docker compose build`.
+3. Run `docker compose -p genlayer --profile frontend up -d`
+### 2. Error: connection reset by peer
+This happens if your internet connection drops while Docker is pulling the GenLayer images. 
+
+**Solution:**
+1. Check your internet connection.
+2. Run
+    ```
+   docker system prune -f
+   ```
+   to clear partial downloads.
+5. Re-run
+```
+genlayer init.
+```
+Docker will resume from where it left off.
+### 3. Resolving the "Unmatched" Error
+I noticed an error: `(eval):1: unmatched '`. 
+ **The Cause:** This happens if you accidentally paste a command that has a single quote `'` that isn't closed.
+ **The Fix:** If you see this, press **`Ctrl + C`** to cancel the line and try typing the command again.
+### 4. Linux/WSL Troubleshooting
+
+#### a). Permission Denied (docker.sock)
+If you get a "permission denied" error when running `genlayer init`, add your user to the docker group:
+```bash
+sudo usermod -aG docker $USER
+newgrp docker
+```
+### b) "genlayer init" Fails
+
+<img width="2025" height="1013" alt="WindowsTerminal_z3umh1XaVn" src="https://github.com/user-attachments/assets/f9cc265c-f0e3-43eb-9170-caf46d252af5" />
+
+1. Restart Docker Desktop
+2. Run `genlayer init` again
+
+### 5. Network/Download Errors
+1. Add DNS to Docker Desktop: Settings → Docker Engine
+```json
+   "dns": ["8.8.8.8", "8.8.4.4"]
+```
+2. Check Windows Firewall for Docker Desktop
+
+<img width="854" height="465" alt="explorer_elwL7Zy61e" src="https://github.com/user-attachments/assets/64ac0598-7d9c-46dc-acd7-0528de8dcb14" />
+
+
+### 6. Out of Space
+```bash
+docker system prune -a --volumes
+```
+### 7. Ensure Docker Images pulled successfully
+
+<img width="1567" height="1085" alt="vySM1zY4D2" src="https://github.com/user-attachments/assets/3895a9b0-286d-4699-8bfd-7be8b3dda8e1" />
+
+### Made with 🫶🏻❤️ by *[MystiqueMide](x.com/MystiqueMide)*
